@@ -1,30 +1,11 @@
-/* Universal Styles */
-* {
-  margin: 0;
-}
-
-html {
-  background-color: white;
-  display: block;
-}
-
+/* ======================== Universal Styles */
 body {
-  font-family: Helvetica;
+  font-family: "Open Sans";
   font-size: 16px;
   line-height: 1.25;
 }
 
-/* Container Padding */
-.container {
-  padding: 32px 24px;
-}
-
-#container {
-  position: relative;
-  top: 67px;
-}
-
-/* Page-Top Banner Styles */
+/* ======================== Page-Top Banner Styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -33,7 +14,7 @@ header {
   padding-left: 24px;
   position: fixed;
   z-index: 5;
-  width: 99%;
+  width: 100%;
 }
 
 .logo {
@@ -43,53 +24,186 @@ header {
 }
 
 .logo img {
-  height: 3rem;
+  height: 2.75rem;
 }
 
 #first {
   font-weight: bold;
 }
 
-#last {
-
-}
-
 nav .link {
-  border-right: 1px solid black;
+  padding-right: 16px;
 }
 
 nav .last-link {
-   border-right: 1px solid white; /* need to figure out how to not need this */
+  padding-right: 24px; 
 }
 
 nav  {
-  display: block;
-  padding: 16px 64px 16px 64px;
+  padding: 16px 24px 16px 24px;
+  justify-content: space-between;
 }
 
 nav a {
   color: black;
   text-decoration: none;
-  padding: 8px 28px;
+}
+
+.desktop {
+    display: flex; 
+    justify-content: flex-end;
 }
 
 .mobile {
   display: none;
 }
 
+/* ======================== 'MAIN' CONTAINER */
+.main {
+  top: 5rem;
+}
+
+/* ======================== JUMBOTRON SECTION */
+.jumbotron {
+  display: flex;
+  align-items: center;
+  color: #4A4A4A;
+  background-color: #D8D8D8;
+  position: relative;
+  top: 64px;
+}
+
+.banner {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.banner-promo {
+  width: 40%;
+  padding-left: 0px;
+  padding-right: 10%;
+  padding-bottom: 32px;
+}
+
+.start-button {
+  background-color: #4A4A4A;
+  padding: 8px;
+  text-align: center;
+  color: white;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.banner-promo h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 32px;
+}
+
+.banner-promo h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+.start-button a{
+  text-decoration: none;
+  color: white;
+} 
 
 
+/* ======================== Mid-Size Device Media Query*/
+@media only screen and (max-width: 850px) {
+  .mobile {
+    display: none;
+  }
 
+  nav a {
+    padding: 8px 8px;
+  }
 
-/*Mobile Device Media Query*/
-@media only screen and (max-width: 480px) {
-  .desktop.nav,
+  .banner-promo h1 {
+    font-size: 1.6rem;
+  }
+
+  .banner-promo h4 {
+    font-size: .85rem;
+  }
+
+  /*Mid-Size Device Font Resize */
+  nav .link {
+    font-size: 14px;
+  }
+
+  nav .last-link {
+    font-size: 14px;
+  }
+}
+
+/* ======================== Transition Point Media Query*/
+@media only screen and (max-width: 650px) {
+  .mobile {
+    display: none;
+  }
+
+  nav a {
+    padding: 4px 4px;
+  }
+
+  .banner-promo h1 {
+    font-size: 1.2rem;
+  }
+
+  .banner-promo h4 {
+    font-size: .75rem;
+  }
+
+  .companies {
+    display: none;
+  }
+}
+
+/* ======================== Mobile Device Media Query*/
+@media only screen and (max-width: 500px) {
+  .desktop {
+    display: none;
+  }
+
   .logo {
     display: none;
   }
 
-  #container {
-    top: 70px;
+  .jumbotron {
+    display: block;
+    padding: 0 0 2rem 0;
+  }
+
+  .banner {
+    width: 100%;
+    margin-right: 0;
+    padding: 0px 0px;
+  }
+
+  .banner-promo {
+    margin: 2rem auto 2rem 1.5rem;
+    text-align: left;
+    width: 90%;  /* need to fix this */
+  }
+
+  .banner-promo h1 {
+    font-size: 2rem;
+  }
+
+  .banner-promo h4 {
+    font-size: 1rem;
   }
 
   /*Header/Mobile Nav Bar*/
@@ -100,6 +214,5 @@ nav a {
     width: 100%;
     padding-left: 0;
   }
-
 }
 
