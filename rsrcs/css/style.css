@@ -3,18 +3,37 @@ body {
   font-family: "Open Sans";
   font-size: 16px;
   line-height: 1.25;
+  max-width: 100%;
 }
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 
 /* ======================== Page-Top Banner Styles */
 header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
   padding-left: 24px;
-  position: fixed;
-  z-index: 5;
+  z-index: 10;
   width: 100%;
+  top: 0;
+  background-color: white;
 }
 
 .logo {
@@ -25,10 +44,11 @@ header {
 
 .logo img {
   height: 2.75rem;
+  width: auto;
 }
 
 #first {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 nav .link {
@@ -45,7 +65,7 @@ nav  {
 }
 
 nav a {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
@@ -61,38 +81,41 @@ nav a {
 /* ======================== 'MAIN' CONTAINER */
 .main {
   top: 5rem;
-  width: 99%;
+  max-width: 99%;
 }
 
 /* ======================== JUMBOTRON SECTION */
+
+
 .jumbotron {
-  display: flex;
-  align-items: center;
-  color: #4A4A4A;
-  background-color: #D8D8D8;
-  position: relative;
-  top: 64px;
+    display: flex;
+    margin-top: 64px;
+    padding-left: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    background-color: lightgray;  /*future formatting change point */
 }
 
 .banner {
   width: 60%;
   display: flex;
   align-items: center;
-  padding: 32px 24px;
+  margin-right: 24px;
 }
 
 .banner-promo {
   width: 40%;
   padding-left: 0px;
-  padding-right: 10%;
-  padding-bottom: 32px;
 }
 
 .start-button {
   background-color: #4A4A4A;
   padding: 8px;
   text-align: center;
-  color: white;
+  color: #FFF;
+  width: 80%;
+  border-radius: 16px;
 }
 
 .banner img {
@@ -117,9 +140,93 @@ nav a {
 
 .start-button a{
   text-decoration: none;
-  color: white;
+  color: #FFF;
 } 
 
+/* ======================== SCHOOL INFO SECTION */
+.school-info {
+  width: 100%;
+  display: flex;
+}
+
+.quote-container {
+  width: 60%;
+  padding-left: 24px;
+  padding-top: 32px;
+  padding-right: 24px;
+  border-right: 1px solid #D3D3D3;
+}
+
+.keep-learning img{
+  width: 100%;
+  height: auto;
+}
+
+.quote {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.quote h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  padding-bottom: 24px;
+}
+
+.quote p {
+  padding-top: 0px;
+  padding-bottom: 32px;
+  line-height: 1.2;
+
+}
+
+#quoted {
+  font-size: 13px;
+}
+
+
+/* right side of school information section */
+.info-tiles {
+  width: 40%;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.tile .img-lg {
+  max-width: 35%;
+  height: auto;
+  margin: 16px;
+}
+
+.img-lg img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.info-text {
+  width: 65%;
+}
+
+.info-sub-txt {
+  padding: 8px 0px;
+  font-size: 14px;
+}
+
+.tile a {
+  color: red;
+  font-size: 14px;
+}
+
+/* don't show the mobile image on desktop canvas */
+.img-sm img {
+  display: none;
+}
 
 /* ======================== Mid-Size Device Media Query*/
 @media only screen and (max-width: 785px) {
@@ -188,7 +295,6 @@ nav a {
 
   .jumbotron {
     display: block;
-    padding: 0 0 2rem 0;
   }
 
   .banner {
@@ -198,9 +304,9 @@ nav a {
   }
 
   .banner-promo {
-    margin: 2rem auto 2rem 1.5rem;
+    padding-left: 24px;
     text-align: left;
-    width: 90%;  /* need to fix this */
+    width: 80%;
   }
 
   .banner-promo h1 {
@@ -210,6 +316,36 @@ nav a {
   .banner-promo h4 {
     font-size: 1rem;
   }
+
+
+  .info-tiles {
+    width: 100%;
+  }
+
+  .quote-container {
+    display: none;
+  }
+
+  .tile {
+    width: 100%;
+  }
+
+  .img-sm {
+    margin: 16px;
+    display: block;
+  }
+
+  .img-sm img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+
+  .img-lg {
+    display: none;
+  }
+
 
   /*Header/Mobile Nav Bar*/
   .mobile {
