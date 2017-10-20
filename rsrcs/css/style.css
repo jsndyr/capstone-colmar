@@ -61,6 +61,7 @@ nav a {
 /* ======================== 'MAIN' CONTAINER */
 .main {
   top: 5rem;
+  width: 99%;
 }
 
 /* ======================== JUMBOTRON SECTION */
