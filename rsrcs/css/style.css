@@ -39,11 +39,11 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .logo img {
-  height: 2.75rem;
+  height: 44px;
   width: auto;
 }
 
@@ -80,7 +80,7 @@ nav a {
 
 /* ======================== 'MAIN' CONTAINER */
 .main {
-  top: 5rem;
+  top: 80px;
   max-width: 99%;
 }
 
@@ -88,13 +88,13 @@ nav a {
 
 
 .jumbotron {
-    display: flex;
-    margin-top: 64px;
-    padding-left: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    align-items: center;
-    background-color: lightgray;  /*future formatting change point */
+  display: flex;
+  margin-top: 64px;
+  padding-left: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  background-color: lightgray;  /*future formatting change point */
 }
 
 .banner {
@@ -124,7 +124,7 @@ nav a {
 }
 
 .banner-promo h1 {
-  font-size: 2.2rem;
+  font-size: 35;
   font-weight: 800;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -132,7 +132,7 @@ nav a {
 }
 
 .banner-promo h4 {
-  font-size: 1.1rem;
+  font-size: 18;
   font-weight: 700;
   padding-top: 16px;
   padding-bottom: 32px;
@@ -168,7 +168,7 @@ nav a {
 }
 
 .quote h1 {
-  font-size: 1.7rem;
+  font-size: 27px;
   font-weight: 800;
   padding-bottom: 24px;
 }
@@ -228,6 +228,58 @@ nav a {
   display: none;
 }
 
+
+/* ======================== COURSES SECTION ======================= */
+.course-section {
+  background-color: #D3D3D3;
+}
+
+.course-banner {
+  padding-top: 32px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.course-container {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  margin: 32px 72px;
+}
+
+.course {
+  max-width: 30%;
+  margin-bottom: 32px;
+  background-color: #D3D3D3;
+}
+
+.course-img img {
+  width: 100%;
+  height: auto;
+}
+
+.course-details {
+    background-color: white;
+    padding: 16px 24px 24px 16px;
+    height: 45%;
+}
+
+.course-details h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.course-details p {
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+
+
 /* ======================== Mid-Size Device Media Query*/
 @media only screen and (max-width: 785px) {
   .mobile {
@@ -239,11 +291,11 @@ nav a {
   }
 
   .banner-promo h1 {
-    font-size: 1.6rem;
+    font-size: 26;
   }
 
   .banner-promo h4 {
-    font-size: .85rem;
+    font-size: .14px;
   }
 
   /*Mid-Size Device Font Resize */
@@ -267,11 +319,11 @@ nav a {
   }
 
   .banner-promo h1 {
-    font-size: 1.2rem;
+    font-size: 19px;
   }
 
   .banner-promo h4 {
-    font-size: .75rem;
+    font-size: 12px;
   }
 
   .companies {
@@ -312,11 +364,11 @@ nav a {
   }
 
   .banner-promo h1 {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .banner-promo h4 {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
 
