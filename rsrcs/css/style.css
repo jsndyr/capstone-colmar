@@ -295,6 +295,8 @@ nav a {
 
   .jumbotron {
     display: block;
+    padding-top: 0px;
+    padding-left: 0px;
   }
 
   .banner {
@@ -320,6 +322,7 @@ nav a {
 
   .info-tiles {
     width: 100%;
+
   }
 
   .quote-container {
@@ -328,11 +331,12 @@ nav a {
 
   .tile {
     width: 100%;
+    display: block;
   }
 
   .img-sm {
     margin: 16px;
-    display: block;
+
   }
 
   .img-sm img{
@@ -346,6 +350,10 @@ nav a {
     display: none;
   }
 
+
+  .info-txt {
+        padding-left: 16px;
+  }
 
   /*Header/Mobile Nav Bar*/
   .mobile {
