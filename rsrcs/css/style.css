@@ -1,6 +1,9 @@
-/* ======================== Universal Styles */
+/* ================================================== */
+/* ======================== UNIVERSAL STYLES ======== */
+/* ================================================== */
 body {
-  font-family: "Open Sans";
+/*  font-family: "Open Sans"; */
+  font-family: "Roboto";
   font-size: 16px;
   line-height: 1.25;
   max-width: 100%;
@@ -21,8 +24,9 @@ h3 {
   font-weight: 700;
 }
 
-
-/* ======================== Page-Top Banner Styles */
+/* ================================================== */
+/* ======================== TOP BANNER SECTION ====== */
+/* ================================================== */
 header {
   position: fixed;
   display: flex;
@@ -78,15 +82,17 @@ nav a {
   display: none;
 }
 
-/* ======================== 'MAIN' CONTAINER */
+/* ================================================== */
+/* ======================== MAIN PAGE CONTAINER ===== */
+/* ================================================== */
 .main {
   top: 80px;
   max-width: 99%;
 }
 
-/* ======================== JUMBOTRON SECTION */
-
-
+/* ================================================== */
+/* ======================== JUMBOTRON SECTION ======= */
+/* ================================================== */
 .jumbotron {
   display: flex;
   margin-top: 64px;
@@ -143,7 +149,9 @@ nav a {
   color: #FFF;
 } 
 
-/* ======================== SCHOOL INFO SECTION */
+/* ================================================== */
+/* ======================== SCHOOL INFO SECTION ===== */
+/* ================================================== */
 .school-info {
   width: 100%;
   display: flex;
@@ -216,6 +224,7 @@ nav a {
 .info-sub-txt {
   padding: 8px 0px;
   font-size: 14px;
+  margin-right: 10px;
 }
 
 .tile a {
@@ -229,7 +238,9 @@ nav a {
 }
 
 
-/* ======================== COURSES SECTION ======================= */
+/* ================================================== */
+/* ======================== COURSES SECTION ========= */
+/* ================================================== */
 .course-section {
   background-color: #D3D3D3;
 }
@@ -278,61 +289,83 @@ nav a {
   padding-left: 16px;
 }
 
-
-
-/* ======================== Mid-Size Device Media Query*/
-@media only screen and (max-width: 785px) {
-  .mobile {
-    display: none;
-  }
-
-  nav a {
-    padding: 8px 8px;
-  }
-
-  .banner-promo h1 {
-    font-size: 26;
-  }
-
-  .banner-promo h4 {
-    font-size: .14px;
-  }
-
-  /*Mid-Size Device Font Resize */
-  nav .link {
-    font-size: 14px;
-  }
-
-  nav .last-link {
-    font-size: 14px;
-  }
+.mobile-course {
+  display: none;
 }
 
-/* ======================== Transition Point Media Query*/
-@media only screen and (max-width: 685px) {
-  .mobile {
-    display: none;
-  }
-
-  nav a {
-    padding: 4px 4px;
-  }
-
-  .banner-promo h1 {
-    font-size: 19px;
-  }
-
-  .banner-promo h4 {
-    font-size: 12px;
-  }
-
-  .companies {
-    display: none;
-  }
+/* ================================================== */
+/* ======================== THESIS SECTION ========== */
+/* ================================================== */
+.thesis-section {
+  margin: 32px; 
+  text-align: center;
 }
 
-/* ======================== Mobile Device Media Query*/
+.thesis-main-exhibit {
+  display: flex; 
+}
+
+.thesis-video {
+  width: 60%; 
+  margin: 0px 24px 24px 24px; 
+}
+
+.thesis-sidebar{
+  width: 40%;
+}
+
+.thesis-minbox {
+  display: flex;
+  align-items: center;
+}
+
+.thesis-img{
+  width: 35%;
+  margin: 16px;
+}
+
+.thesis-img img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.thesis-txt{
+  width: 65%;
+}
+
+.thesis-minbox.one {
+  background-color: lightgray;
+}
+
+/* ================================================== */
+/* ======================== FOOTER SECTION ========== */
+/* ================================================== */
+footer {
+  border-top: 1px solid lightgray;
+}
+
+footer .footer-deets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.footer-links ul {
+  display: flex;
+}
+
+.footer-links ul li {
+  padding-left: 16px;
+}
+
+/* ================================================== */
+/* ======================== Mobile Device Media Query */
+/* ================================================== */
 @media only screen and (max-width: 485px) {
+
+/* TOP HEADER SECTION */
   .desktop {
     display: none;
   }
@@ -345,6 +378,16 @@ nav a {
     padding-left: 0px;
   }
 
+  /*Header/Mobile Nav Bar*/
+  .mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+/* JUMBOTRON SECTION */
   .jumbotron {
     display: block;
     padding-top: 0px;
@@ -374,7 +417,6 @@ nav a {
 
   .info-tiles {
     width: 100%;
-
   }
 
   .quote-container {
@@ -404,16 +446,76 @@ nav a {
 
 
   .info-txt {
-        padding-left: 16px;
+    padding-left: 16px;
   }
 
-  /*Header/Mobile Nav Bar*/
-  .mobile {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding-left: 0;
+  /* COURSE SECTION */
+  /* need to suppress the images and text and replace with short titles/boxes */
+
+  .course-section {
+  background-color: white;
+  }
+  .course-details {
+    display: none;
+  }
+
+  .course-img {
+    display: none;
+  }
+
+  .mobile-course {
+    display: block;
+    border-radius: 16px;
+    background-color: lightgray;
+    padding: 16px 0px 24px 16px;
+    font-size: 18px;
+  }
+
+  .course-banner {
+    padding-top: 40px;
+  }
+
+  .course-container {
+    display: block;
+    margin: 16px 16px 32px 16px;
+  }
+
+  .course {
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .course a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  }
+
+/* THESIS SECTION */
+/* need to suppress the two mini boxes on the right and the text under the video whil only showing the video*/
+  .thesis-main-txt {
+    display: none;
+  }
+  .thesis-sidebar {
+    display: none;
+  }
+
+  .thesis-section {
+    margin: 32px 0px 16px 0px; 
+    text-align: center;
+  }
+
+  .thesis-video {
+    width: 100%; 
+    margin: 0px 0px 24px 0px; 
+  }
+
+
+/* FOOTER SECTION */
+  .footer-deets {
+    margin: 16px 0px 16px 0px;
+  }
+  .footer-links {
+    display: none;
   }
 }
-
