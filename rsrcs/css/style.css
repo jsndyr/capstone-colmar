@@ -3,10 +3,11 @@
 /* ================================================== */
 body {
 /*  font-family: "Open Sans"; */
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.25;
   max-width: 100%;
+  color: #3e3e3e;
 }
 
 h1 {
@@ -34,10 +35,11 @@ header {
   align-items: center;
   height: 64px;
   padding-left: 24px;
-  z-index: 10;
+  z-index: 5;
   width: 100%;
   top: 0;
-  background-color: white;
+  background-color: #dfb96d;
+  color:  #333333;
 }
 
 .logo {
@@ -69,8 +71,12 @@ nav  {
 }
 
 nav a {
-  color: #000;
+  color: #333333;
   text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
 }
 
 .desktop {
@@ -87,7 +93,7 @@ nav a {
 /* ================================================== */
 .main {
   top: 80px;
-  max-width: 99%;
+  max-width: 100%;
 }
 
 /* ================================================== */
@@ -95,33 +101,36 @@ nav a {
 /* ================================================== */
 .jumbotron {
   display: flex;
-  margin-top: 64px;
-  padding-left: 24px;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
-  background-color: lightgray;  /*future formatting change point */
+  margin-top: 64px;
+  background-color: #e6e6e6;
 }
 
 .banner {
   width: 60%;
-  display: flex;
+
   align-items: center;
-  margin-right: 24px;
+  padding: 32px 24px;
 }
 
 .banner-promo {
   width: 40%;
-  padding-left: 0px;
+  padding: 32px 24px;
 }
 
 .start-button {
-  background-color: #4A4A4A;
+  background-color: #595959;
   padding: 8px;
   text-align: center;
   color: #FFF;
-  width: 80%;
+  width: 100%;
   border-radius: 16px;
+  margin: 0 24px 0 0;
+  transition: all 500ms ease-out;
+}
+
+.start-button:hover {
+  background-color: #d19b2e;
 }
 
 .banner img {
@@ -130,15 +139,12 @@ nav a {
 }
 
 .banner-promo h1 {
-  font-size: 35;
+  font-size: 35px;
   font-weight: 800;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 32px;
 }
 
 .banner-promo h4 {
-  font-size: 18;
+  font-size: 18px;
   font-weight: 700;
   padding-top: 16px;
   padding-bottom: 32px;
@@ -162,7 +168,7 @@ nav a {
   padding-left: 24px;
   padding-top: 32px;
   padding-right: 24px;
-  border-right: 1px solid #D3D3D3;
+  border-right: 1px solid #d9d9d9;
 }
 
 .keep-learning img{
@@ -203,12 +209,17 @@ nav a {
   align-items: center;
   margin-top: 16px;
   margin-bottom: 16px;
+  transition: all 500ms ease-out;
 }
 
 .tile .img-lg {
   max-width: 35%;
   height: auto;
   margin: 16px;
+}
+
+.tile:hover {
+  background-color: #e8cd96;
 }
 
 .img-lg img {
@@ -228,8 +239,12 @@ nav a {
 }
 
 .tile a {
-  color: red;
+  color: #a77c25;
   font-size: 14px;
+}
+
+.tile a:hover {
+  font-weight: bold;
 }
 
 /* don't show the mobile image on desktop canvas */
@@ -242,7 +257,7 @@ nav a {
 /* ======================== COURSES SECTION ========= */
 /* ================================================== */
 .course-section {
-  background-color: #D3D3D3;
+  background-color:  #e6e6e6;
 }
 
 .course-banner {
@@ -261,7 +276,8 @@ nav a {
 .course {
   max-width: 30%;
   margin-bottom: 32px;
-  background-color: #D3D3D3;
+  background-color:  #FFF;
+  transition: all 500ms ease-out;
 }
 
 .course-img img {
@@ -270,7 +286,6 @@ nav a {
 }
 
 .course-details {
-    background-color: white;
     padding: 16px 24px 24px 16px;
     height: 45%;
 }
@@ -287,6 +302,14 @@ nav a {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
+}
+
+.course:hover {
+  background-color: #e8cd96;
+}
+
+.mobile-course-container {
+  display: none;
 }
 
 .mobile-course {
@@ -317,6 +340,11 @@ nav a {
 .thesis-minbox {
   display: flex;
   align-items: center;
+  transition: all 500ms ease-out;
+}
+
+.thesis-minbox:hover {
+  background-color: #e8cd96;
 }
 
 .thesis-img{
@@ -333,15 +361,12 @@ nav a {
   width: 65%;
 }
 
-.thesis-minbox.one {
-  background-color: lightgray;
-}
 
 /* ================================================== */
 /* ======================== FOOTER SECTION ========== */
 /* ================================================== */
 footer {
-  border-top: 1px solid lightgray;
+  background-color: #595959;
 }
 
 footer .footer-deets {
@@ -350,6 +375,8 @@ footer .footer-deets {
   align-items: center;
   padding-left: 24px;
   padding-right: 24px;
+  color: #d9d9d9;
+  font-size: 12px;
 }
 
 .footer-links ul {
@@ -359,6 +386,15 @@ footer .footer-deets {
 .footer-links ul li {
   padding-left: 16px;
 }
+
+.footer-links a {
+  color: #d9d9d9;
+}
+
+.footer-links a:hover {
+  font-weight: bold;
+}
+
 
 /* ================================================== */
 /* ======================== Mobile Device Media Query */
@@ -384,7 +420,6 @@ footer .footer-deets {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding-left: 0;
   }
 
 /* JUMBOTRON SECTION */
@@ -453,7 +488,7 @@ footer .footer-deets {
   /* need to suppress the images and text and replace with short titles/boxes */
 
   .course-section {
-  background-color: white;
+  background-color: #FFF;
   }
   .course-details {
     display: none;
@@ -465,8 +500,7 @@ footer .footer-deets {
 
   .mobile-course {
     display: block;
-    border-radius: 16px;
-    background-color: lightgray;
+    background-color: #b3b3b3;
     padding: 16px 0px 24px 16px;
     font-size: 18px;
   }
@@ -486,9 +520,13 @@ footer .footer-deets {
   }
 
   .course a {
-  color: #000;
+  color: #333333;
   text-decoration: none;
   font-weight: 700;
+  }
+
+  .tile:hover {
+    background-color: #FFF;
   }
 
 /* THESIS SECTION */
@@ -518,4 +556,6 @@ footer .footer-deets {
   .footer-links {
     display: none;
   }
+
 }
+
